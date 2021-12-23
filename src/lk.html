@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+    <div class="content-wrapper bg-light-gray flex justify-between min-h-[100vh] max-h-[100%] relative">
+        <div class="sidebar box-border sm:pt-[16px] lg:px-[80px] w-[500px] min-w-[320px] sm:max-w-[100%]  pb-[20px] min-h-[100%] overflow-y-scroll sm:px-[30px] sm:z-50  bg-light-gray sm:fixed  xl:block  xl:relative">
+            <a href="#" class="logo">
+                <svg width="120" height="43" viewBox="0 0 120 43" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="120" height="42.973" fill="url(#pattern0)" />
+                    <defs>
+                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_153_367"
+                                transform="translate(-0.000298091) scale(0.0052663 0.0147059)" />
+                        </pattern>
+                        <image id="image0_153_367" width="190" height="68"
+                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAL4AAABECAYAAAA/fY/iAAAACXBIWXMAAArEAAAKxAFmbYLUAAAF+mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDIxLTEwLTEzVDEyOjU4OjE5KzAzOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMS0xMC0xOVQxMTo1Njo1OSswMzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMS0xMC0xOVQxMTo1Njo1OSswMzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpjNzUzMjI5MS00ZGVhLWRhNGEtOTc3ZS05ODVhZTAxZWIyMDUiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo5OGY1OTIzYS1kYTI0LTFjNGMtYmQ4Zi03ZWRjZTliYjU3ZjciIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDozYTg1MTk5OC0wNjk3LWY1NDYtYWMxZi01NWE2MGU0NGMzYjEiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjNhODUxOTk4LTA2OTctZjU0Ni1hYzFmLTU1YTYwZTQ0YzNiMSIgc3RFdnQ6d2hlbj0iMjAyMS0xMC0xM1QxMjo1ODoxOSswMzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpjNzUzMjI5MS00ZGVhLWRhNGEtOTc3ZS05ODVhZTAxZWIyMDUiIHN0RXZ0OndoZW49IjIwMjEtMTAtMTlUMTE6NTY6NTkrMDM6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5mg9aiAAAOqUlEQVR4nO2deZQUxRnAfwt4gcKiRgwq4hFE0YiaTuNBwER0okZsBh0PjPiMJx7rrQT1KfGMEkWCd6JR0RHGFq83iqJRSei0wSseoKAQg0qCCyqgIGz++LqZ3tnpY7p7Vtit33v7Zme6qqtm5ps6vqvqmpqaUCjaG53KXzAt7UjgJmA7YEPPpa+AhcAc4C3gJeBvhm4vr3kvFYqUqas04puW1gu4EciF1F+F/AAeAqYYur0s7Q4qFLWgouC7mJZ2MHAvsG2Ee30N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" />
+                    </defs>
+                </svg>
+            </a>
+            <ul class="mt-[44px] lc-nav">
+                <li>
+                    <a href="#" class="flex items-center">
+                        <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.50002 0C4.59573 0 3.03849 1.21244 3.03849 3.46154C3.03849 4.96695 3.73936 6.52644 4.76925 7.39183V8.1851C4.76925 8.53215 4.53488 8.82963 4.24642 8.88822C1.99732 9.58008 0.15387 11.0697 0.15387 11.9351V12.9808C0.15387 14.076 2.97989 15 6.50002 15C10.0202 15 12.8462 14.076 12.8462 12.9808V11.9351C12.8462 11.1283 11.0613 9.58008 8.75363 8.88822C8.46517 8.82963 8.23079 8.47356 8.23079 8.1851V7.39183C9.26069 6.52644 9.96156 4.96695 9.96156 3.46154C9.96156 1.21244 8.40432 0 6.50002 0Z"
+                                fill="#B8B8B8" />
+                        </svg>
+                        <span class="text-medium ml-[14px]">Иванов В. С.</span>
+                    </a>
+                </li>
+                <li class="mt-[33px]">
+                    <a href="#" class="flex items-center active-link">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.7083 0H2.29167C1.02833 0 0 1.02833 0 2.29167V12.7083C0 13.9717 1.02833 15 2.29167 15H12.7083C13.9717 15 15 13.9717 15 12.7083V2.29167C15 1.02833 13.9717 0 12.7083 0ZM7.5 2.91667C8.65042 2.91667 9.58333 3.84958 9.58333 5C9.58333 6.15042 8.65042 7.08333 7.5 7.08333C6.34958 7.08333 5.41667 6.15042 5.41667 5C5.41667 3.84958 6.34958 2.91667 7.5 2.91667ZM11.25 9.39083C11.25 10.5821 9.73042 11.6667 7.5 11.6667C5.26958 11.6667 3.75 10.5821 3.75 9.39083V9.10917C3.75 8.68083 4.0975 8.33333 4.52583 8.33333H10.4742C10.9025 8.33333 11.25 8.68083 11.25 9.10917V9.39083Z"
+                                fill="#B8B8B8" />
+                        </svg>
+                        <span class="text-medium ml-[14px]">Мой профиль</span>
+                    </a>
+                </li>
+                <li class="mt-[33px]">
+                    <a href="#" class="flex items-center">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.6875 0C0.757125 0 0 0.757125 0 1.6875V11.4375C0 12.3679 0.757125 13.125 1.6875 13.125H11.4375C12.3679 13.125 13.125 12.3679 13.125 11.4375V1.6875C13.125 0.757125 12.3679 0 11.4375 0H1.6875ZM13.875 1.97827V11.8125C13.875 12.9495 12.9499 13.875 11.8125 13.875H1.97827C2.21115 14.5282 2.83013 15 3.5625 15H11.8125C13.5701 15 15 13.5701 15 11.8125V3.5625C15 2.83013 14.5282 2.21152 13.875 1.97827ZM9.18677 4.125C9.33067 4.125 9.4746 4.17992 9.58447 4.28979C9.80422 4.50954 9.80458 4.86546 9.58521 5.08521L6.21021 8.46021C6.10033 8.57008 5.9565 8.625 5.8125 8.625C5.6685 8.625 5.52467 8.57008 5.41479 8.46021L3.91479 6.96021C3.69504 6.74046 3.69504 6.38454 3.91479 6.16479C4.13454 5.94504 4.49046 5.94504 4.71021 6.16479L5.81177 7.26709L8.78906 4.28979C8.89894 4.17992 9.04286 4.125 9.18677 4.125Z"
+                                fill="#B8B8B8" />
+                        </svg>
+                        <span class="text-medium ml-[14px]"> Квалицикация</span>
+                    </a>
+                </li>
+                <li class="mt-[33px]">
+                    <a href="#" class="flex items-center">
+                        <svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.875 0C0.84375 0 0 0.84375 0 1.875V16.875C0 17.9063 0.84375 18.75 1.875 18.75H13.125C14.1562 18.75 15 17.9063 15 16.875V5.625L9.375 0H1.875ZM8.4375 1.40625L13.5938 6.5625H8.4375V1.40625ZM6.0498 8.44849C6.59895 8.44849 7.15039 8.66262 7.57507 9.09668C8.18632 9.72012 8.44969 10.6374 8.4375 11.2683C8.42156 12.128 7.94993 13.0828 7.19055 13.905C7.34805 14.0053 7.49438 14.0625 7.61719 14.0625C7.97719 14.0625 8.21874 13.8087 8.64624 13.2715C9.03155 12.7887 9.51188 12.1875 10.3125 12.1875C10.7288 12.1875 11.0971 12.4628 11.2134 12.8632C11.3259 13.2363 11.7291 14.0625 12.1875 14.0625V15.9375C11.1816 15.9375 10.4526 15.3058 9.98291 14.6008C9.50854 15.1849 8.80781 15.9375 7.61719 15.9375C6.94781 15.9375 6.28146 15.6143 5.69458 15.108C4.83489 15.6152 3.84188 15.9375 2.8125 15.9375V14.0625C3.39 14.0625 3.96667 13.8921 4.48792 13.6249C4.05292 12.8721 3.77714 12.0376 3.75183 11.283C3.72933 10.6417 3.92588 9.72882 4.54651 9.0857C4.95526 8.66288 5.50066 8.44849 6.0498 8.44849ZM6.05347 10.3125C6.00847 10.3125 5.9626 10.3182 5.89417 10.3894C5.73198 10.5572 5.61286 10.9199 5.62317 11.217C5.63817 11.6258 5.77411 12.0555 5.97473 12.453C6.33567 12.0264 6.55594 11.5851 6.5625 11.2317C6.56625 11.0348 6.4522 10.6289 6.23657 10.4095C6.14095 10.312 6.08159 10.3125 6.05347 10.3125Z"
+                                fill="#B8B8B8" />
+                        </svg>
+                        <span class="text-medium ml-[14px]">Документы на подпись</span>
+                    </a>
+                </li>
+            </ul>
+            <h2 class="mt-[40px] text-gray uppercase text-small">ваши фонды</h2>
+            <ul class="mt-[25px] lc-fonds overflow-y-hidden w-full max-h-[247px] relative">
+                <li class="controll-li w-full overflow-hidden max-h-[56px]">
+                    <a href="#" class="flex items-center justify-between">
+                        <span class="text-medium">
+                            ЗПИФ недвижимости <br>
+                            «Недвижимость Первый»
+                        </span>
+                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.4428 9.92263e-05C11.298 0.00435584 11.1618 0.0639485 11.0618 0.168236L5.99855 5.23148L0.935309 0.168236C0.832086 0.0628845 0.691618 0.00329169 0.543701 0.00329169C0.322357 0.00329169 0.12336 0.138439 0.0403563 0.343821C-0.0437116 0.549202 0.00630337 0.78438 0.164862 0.938682L5.61333 6.38715C5.82616 6.59998 6.17094 6.59998 6.38377 6.38715L11.8322 0.938682C11.994 0.783316 12.0451 0.543882 11.9578 0.336372C11.8716 0.128862 11.6673 -0.00415739 11.4428 9.92263e-05Z"
+                                fill="#2D3A2E" />
+                        </svg>
+
+                    </a>
+                    <ul class="sub-list mt-[10px]">
+                        <h3  class="text-gray text-default  mt-[20px]">Отчеты</h3>
+                        <li>
+                            <a href="" class="flex items-center">
+                                <span class="color-ico-quatro bg-orange"></span>
+                                <span class="text-medium ml-[17px] text-black">
+                                    Справка СЧА
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="flex items-center">
+                                <span class="color-ico-quatro bg-blue"></span>
+                                <span class="text-medium ml-[17px] text-black">Отчет о приросте</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="controll-li w-full mt-[33px] max-h-[56px] overflow-hidden">
+                    <a href="#" class="flex items-center justify-between">
+                        <span class="text-medium">
+                            ЗПИФ недвижимости <br>
+                            «Недвижимость Первый»
+                        </span>
+                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.4428 9.92263e-05C11.298 0.00435584 11.1618 0.0639485 11.0618 0.168236L5.99855 5.23148L0.935309 0.168236C0.832086 0.0628845 0.691618 0.00329169 0.543701 0.00329169C0.322357 0.00329169 0.12336 0.138439 0.0403563 0.343821C-0.0437116 0.549202 0.00630337 0.78438 0.164862 0.938682L5.61333 6.38715C5.82616 6.59998 6.17094 6.59998 6.38377 6.38715L11.8322 0.938682C11.994 0.783316 12.0451 0.543882 11.9578 0.336372C11.8716 0.128862 11.6673 -0.00415739 11.4428 9.92263e-05Z"
+                                fill="#2D3A2E" />
+                        </svg>
+
+                    </a>
+                    <ul class="sub-list mt-[10px]">
+                        <h3  class="text-gray text-default  mt-[20px]">Отчеты</h3>
+                        <li>
+                            <a href="" class="flex items-center">
+                                <span class="color-ico-quatro bg-orange"></span>
+                                <span class="text-medium ml-[17px] text-black">
+                                    Справка СЧА
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="flex items-center">
+                                <span class="color-ico-quatro bg-blue"></span>
+                                <span class="text-medium ml-[17px] text-black">Отчет о приросте</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="controll-li w-full mt-[33px] max-h-[56px] overflow-hidden">
+                    <a href="#" class="flex items-center justify-between">
+                        <span class="text-medium">
+                            ЗПИФ недвижимости <br>
+                            «Недвижимость Первый»
+                        </span>
+                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.4428 9.92263e-05C11.298 0.00435584 11.1618 0.0639485 11.0618 0.168236L5.99855 5.23148L0.935309 0.168236C0.832086 0.0628845 0.691618 0.00329169 0.543701 0.00329169C0.322357 0.00329169 0.12336 0.138439 0.0403563 0.343821C-0.0437116 0.549202 0.00630337 0.78438 0.164862 0.938682L5.61333 6.38715C5.82616 6.59998 6.17094 6.59998 6.38377 6.38715L11.8322 0.938682C11.994 0.783316 12.0451 0.543882 11.9578 0.336372C11.8716 0.128862 11.6673 -0.00415739 11.4428 9.92263e-05Z"
+                                fill="#2D3A2E" />
+                        </svg>
+
+                    </a>
+                    <ul class="sub-list mt-[10px]">
+                        <h3  class="text-gray text-default  mt-[20px]">Отчеты</h3>
+                        <li>
+                            <a href="" class="flex items-center">
+                                <span class="color-ico-quatro bg-orange"></span>
+                                <span class="text-medium ml-[17px] text-black">
+                                    Справка СЧА
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="flex items-center">
+                                <span class="color-ico-quatro bg-blue"></span>
+                                <span class="text-medium ml-[17px] text-black">Отчет о приросте</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="controll-li w-full mt-[33px] max-h-[56px] overflow-hidden">
+                    <a href="#" class="flex items-center justify-between">
+                        <span class="text-medium">
+                            ЗПИФ недвижимости <br>
+                            «Недвижимость Первый»
+                        </span>
+                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.4428 9.92263e-05C11.298 0.00435584 11.1618 0.0639485 11.0618 0.168236L5.99855 5.23148L0.935309 0.168236C0.832086 0.0628845 0.691618 0.00329169 0.543701 0.00329169C0.322357 0.00329169 0.12336 0.138439 0.0403563 0.343821C-0.0437116 0.549202 0.00630337 0.78438 0.164862 0.938682L5.61333 6.38715C5.82616 6.59998 6.17094 6.59998 6.38377 6.38715L11.8322 0.938682C11.994 0.783316 12.0451 0.543882 11.9578 0.336372C11.8716 0.128862 11.6673 -0.00415739 11.4428 9.92263e-05Z"
+                                fill="#2D3A2E" />
+                        </svg>
+                        
+                    </a>
+                    <ul class="sub-list mt-[10px]">
+                        <h3  class="text-gray text-default  mt-[20px]">Отчеты</h3>
+                        <li>
+                            <a href="" class="flex items-center">
+                                <span class="color-ico-quatro bg-orange"></span>
+                                <span class="text-medium ml-[17px] text-black">
+                                    Справка СЧА
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="flex items-center">
+                                <span class="color-ico-quatro bg-blue"></span>
+                                <span class="text-medium ml-[17px] text-black">Отчет о приросте</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="controll-list absolute bottom-[0px]  w-full h-[50px] flex flex-col justify-center items-center cursor-pointer">
+                    <span class="w-full bg-opacity-70 bg-light-gray h-[40px]"></span>
+                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.4428 9.92263e-05C11.298 0.00435584 11.1618 0.0639485 11.0618 0.168236L5.99855 5.23148L0.935309 0.168236C0.832086 0.0628845 0.691618 0.00329169 0.543701 0.00329169C0.322357 0.00329169 0.12336 0.138439 0.0403563 0.343821C-0.0437116 0.549202 0.00630337 0.78438 0.164862 0.938682L5.61333 6.38715C5.82616 6.59998 6.17094 6.59998 6.38377 6.38715L11.8322 0.938682C11.994 0.783316 12.0451 0.543882 11.9578 0.336372C11.8716 0.128862 11.6673 -0.00415739 11.4428 9.92263e-05Z"
+                            fill="#2D3A2E" />
+                    </svg>
+                </li>
+            </ul>
+            <ul class="mt-[33px]">
+                <li>
+                    <a href="" class="flex items-center">
+                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.10526 0C3.61737 0 0.789474 2.82789 0.789474 6.31579V7.10526V7.81764C0.336546 8.24953 0 8.80511 0 9.47368C0 10.4542 0.677014 11.1812 1.53423 11.5368C2.56136 13.9919 4.61861 15.7895 7.10526 15.7895H8.68421C8.78883 15.791 8.89269 15.7716 8.98977 15.7326C9.08685 15.6936 9.17521 15.6357 9.24971 15.5622C9.32421 15.4888 9.38337 15.4012 9.42375 15.3047C9.46413 15.2082 9.48493 15.1046 9.48493 15C9.48493 14.8954 9.46413 14.7918 9.42375 14.6953C9.38337 14.5988 9.32421 14.5112 9.24971 14.4378C9.17521 14.3643 9.08685 14.3064 8.98977 14.2674C8.89269 14.2284 8.78883 14.209 8.68421 14.2105H7.10526C5.32228 14.2105 3.70339 12.868 2.8896 10.7473C2.83891 10.6152 2.75363 10.4991 2.64268 10.4112C2.53173 10.3233 2.39919 10.2668 2.25894 10.2477C1.87013 10.1942 1.57895 9.88036 1.57895 9.47368C1.57895 9.16974 1.73243 8.93129 1.97214 8.79369C2.09257 8.72451 2.19263 8.62479 2.2622 8.50458C2.33178 8.38438 2.36842 8.24795 2.36842 8.10907V7.89474V7.10526C2.36842 6.66947 2.72211 6.31579 3.15789 6.31579H11.0526C11.4884 6.31579 11.8421 6.66947 11.8421 7.10526V7.89474V11.0526H8.61482C8.53329 10.822 8.38234 10.6223 8.18272 10.4809C7.9831 10.3396 7.74461 10.2635 7.5 10.2632C7.18593 10.2632 6.88472 10.3879 6.66264 10.61C6.44055 10.8321 6.31579 11.1333 6.31579 11.4474C6.31619 11.7465 6.42977 12.0344 6.63371 12.2532C6.83765 12.472 7.11684 12.6055 7.41519 12.627C7.44336 12.63 7.47167 12.6316 7.5 12.6316H12.6316H13.4211C14.2895 12.6316 15 11.9211 15 11.0526V9.47368C15 8.60526 14.2895 7.89474 13.4211 7.89474V6.31579C13.4211 2.82789 10.5932 0 7.10526 0Z" fill="#B8B8B8"/>
+                        </svg>
+                            
+                        <span class="text-medium ml-[17px] text-black">
+                            Поддержка
+                        </span>
+                    </a>
+                </li>
+                <li class="mt-[30px]">
+                    <a href="" class="flex items-center">
+                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.2083 0H2.54167C1.62083 0 0.875 0.745833 0.875 1.66667V13.3333C0.875 14.2542 1.62083 15 2.54167 15H14.2083C15.1292 15 15.875 14.2542 15.875 13.3333V1.66667C15.875 0.745833 15.1292 0 14.2083 0ZM14.7975 8.08917L12.0475 10.8392C11.885 11.0017 11.6717 11.0833 11.4583 11.0833C11.245 11.0833 11.0317 11.0017 10.8692 10.8392C10.5433 10.5133 10.5433 9.98667 10.8692 9.66083L12.1967 8.33333H5.875C5.41417 8.33333 5.04167 7.96083 5.04167 7.5C5.04167 7.03917 5.41417 6.66667 5.875 6.66667H12.1967L10.8692 5.33917C10.5433 5.01333 10.5433 4.48667 10.8692 4.16083C11.195 3.835 11.7217 3.835 12.0475 4.16083L14.7975 6.91083C15.1233 7.23667 15.1233 7.76333 14.7975 8.08917Z" fill="#B8B8B8"/>
+                        </svg>    
+                        <span class="text-medium ml-[17px] text-black">
+                            Выход
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="max-w-[100%] content-bar shadow-default min-h-[100vh] bg-white w-[1400px] h-fit lg:pl-[70px] lg:pt-[36px] lg:pr-[96px] lg:pb-[39px] sm:pt-[37px] sm:pb-[20px] md:pt-[20px] relative">
+            <nav class="flex sm:justify-between w-full  items-center md:p-0 sm:px-[20px]">
+                <a href="#" class="logo mt-[-23px] lg:hidden">
+                    <svg width="120" height="43" viewBox="0 0 120 43" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="120" height="42.973" fill="url(#pattern0)"></rect>
+                        <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_153_367" transform="translate(-0.000298091) scale(0.0052663 0.0147059)"></use>
+                            </pattern>
+                            <image id="image0_153_367" width="190" height="68" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAL4AAABECAYAAAA/fY/iAAAACXBIWXMAAArEAAAKxAFmbYLUAAAF+mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDIxLTEwLTEzVDEyOjU4OjE5KzAzOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMS0xMC0xOVQxMTo1Njo1OSswMzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMS0xMC0xOVQxMTo1Njo1OSswMzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpjNzUzMjI5MS00ZGVhLWRhNGEtOTc3ZS05ODVhZTAxZWIyMDUiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo5OGY1OTIzYS1kYTI0LTFjNGMtYmQ4Zi03ZWRjZTliYjU3ZjciIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDozYTg1MTk5OC0wNjk3LWY1NDYtYWMxZi01NWE2MGU0NGMzYjEiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjNhODUxOTk4LTA2OTctZjU0Ni1hYzFmLTU1YTYwZTQ0YzNiMSIgc3RFdnQ6d2hlbj0iMjAyMS0xMC0xM1QxMjo1ODoxOSswMzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpjNzUzMjI5MS00ZGVhLWRhNGEtOTc3ZS05ODVhZTAxZWIyMDUiIHN0RXZ0OndoZW49IjIwMjEtMTAtMTlUMTE6NTY6NTkrMDM6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5mg9aiAAAOqUlEQVR4nO2deZQUxRnAfwt4gcKiRgwq4hFE0YiaTuNBwER0okZsBh0PjPiMJx7rrQT1KfGMEkWCd6JR0RHGFq83iqJRSei0wSseoKAQg0qCCyqgIGz++LqZ3tnpY7p7Vtit33v7Zme6qqtm5ps6vqvqmpqaUCjaG53KXzAt7UjgJmA7YEPPpa+AhcAc4C3gJeBvhm4vr3kvFYqUqas04puW1gu4EciF1F+F/AAeAqYYur0s7Q4qFLWgouC7mJZ2MHAvsG2Ee30N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"></image>
+                        </defs>
+                    </svg>
+                </a>
+                <ul class="sm:hidden md:flex">
+                    <li class="md:mr-[25px] lg:mr-[65px]">
+                        <a class="text-black" href="#">Все фонды</a>
+                    </li>
+                    <li class="md:mr-[25px] lg:mr-[65px]">
+                        <a class="text-black" href="#">Новости </a>
+                    </li>
+                    <li class="md:mr-[25px] lg:mr-[65px]">
+                        <a class="text-black" href="#">Документы УК</a>
+                    </li>
+                    <li class="md:mr-[25px] lg:mr-[65px]">
+                        <a class="text-black" href="#">Контакты</a>
+                    </li>
+                </ul>
+                <div class="nav-icons flex justify-between">
+                    <button class="search">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 16.2L16.2 18L10.8 12.6V10.8H12.6L18 16.2Z" fill="#B8B8B8"/>
+                            <path d="M6.3 12.6C2.79 12.6 0 9.81 0 6.3C0 2.79 2.79 0 6.3 0C9.81 0 12.6 2.79 12.6 6.3C12.6 9.81 9.81 12.6 6.3 12.6ZM6.3 1.8C3.78 1.8 1.8 3.78 1.8 6.3C1.8 8.82 3.78 10.8 6.3 10.8C8.82 10.8 10.8 8.82 10.8 6.3C10.8 3.78 8.82 1.8 6.3 1.8Z" fill="#B8B8B8"/>
+                            <path d="M9.56146 10.2612L10.1979 9.62492L12.425 11.8526L11.7885 12.4889L9.56146 10.2612Z" fill="#B8B8B8"/>
+                            </svg>
+                            
+                    </button>
+                    <button class="notification ml-[36px]">
+                        <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.5 0C6.72375 0 6.09375 0.63 6.09375 1.40625V2.05811C3.66861 2.68321 1.875 4.8795 1.875 7.5V13.125L0 15V15.9375H5.87769C5.7126 16.2224 5.62545 16.5457 5.625 16.875C5.625 17.3723 5.82254 17.8492 6.17418 18.2008C6.52581 18.5525 7.00272 18.75 7.5 18.75C7.99728 18.75 8.47419 18.5525 8.82582 18.2008C9.17746 17.8492 9.375 17.3723 9.375 16.875C9.37399 16.5456 9.28621 16.2222 9.12048 15.9375H15V15L13.125 13.125V7.5C13.125 4.8795 11.3314 2.68321 8.90625 2.05811V1.40625C8.90625 0.63 8.27625 0 7.5 0ZM7.5 3.75C9.56812 3.75 11.25 5.43187 11.25 7.5V13.125V13.9014L11.4111 14.0625H3.58887L3.75 13.9014V13.125V7.5C3.75 5.43187 5.43187 3.75 7.5 3.75Z" fill="#B8B8B8"/>
+                            <circle cx="12.6137" cy="5.11363" r="3.38636" fill="#A7CF43" stroke="white" stroke-width="2"/>
+                            </svg>       
+                    </button>
+                    <svg class="sidebar-controll cursor-pointer ml-[36px] xl:hidden z-[50000]" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="23" height="1" fill="#2D3A2E"/>
+                        <rect y="10" width="23" height="1" fill="#2D3A2E"/>
+                        <rect y="20" width="23" height="1" fill="#2D3A2E"/>
+                    </svg>
+                        
+                </div>
+            </nav>
+            <main class="flex flex-col items-start mt-[40px] h-fit  md:p-0 sm:px-[0px] box-border">
+                <h1 class="md:p-0 sm:px-[20px] sm:text-h1-sm md:text-h1">Добрый день, Виталий!</h1>
+                <div class="sm:cursor-move lc-block  flex  lg:flex-wrap  justify-items-start sm:overflow-x-scroll max-w-[100%] md:p-0 sm:pb-[30px] sm:px-[20px]">
+                    <div class="bar-register min-w-[260px] lg:max-w-[260-px] p-[30px] box-border shadow-default rounded-default mt-[20px]">
+                        <div class="text-h1 flex items-center justify-between">
+                            <span>279 608,47 ₽</span>
+                            <svg width="3" height="13" viewBox="0 0 3 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="1.5" cy="1.5" r="1.5" fill="#B8B8B8"/>
+                                <circle cx="1.5" cy="6.5" r="1.5" fill="#B8B8B8"/>
+                                <circle cx="1.5" cy="11.5" r="1.5" fill="#B8B8B8"/>
+                            </svg>    
+                        </div>
+                        <div class="text-gray mt-[20px]">
+                            Общая оценочная стоимость <br>
+                            ваших ПАИ
+                        </div>
+                    </div>
+                    <div class="bar-register  min-w-[260px] max-w-[260px] box-border p-[30px] shadow-default rounded-default mt-[20px] ml-[20px]">
+                        <div class="text-default text-black flex items-center justify-between">
+                            <span>Мы собрали для вас 
+                                доступные к покупке ПАИ </span>
+
+                            
+                        </div>
+                        <div class="mt-[20px]">
+                              <button class="btn-default">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="text-small uppercase md:mt-[45px] text-gray md:p-0 sm:px-[20px]">ваши фонды</h2>
+                <ul class="sm:cursor-move md:p-0 sm:px-[20px] fonds-list flex items-stretch justify-between md:flex-wrap max-h-[500px] relative overflow-y-hidden sm:overflow-x-scroll max-w-[100%]">
+                    <li class="fond-item sm:min-w-[260px] sm:mr-[10px] md:mr-[0] rounded-default bg-opacityGreen block py-[17px] pl-[25px] pr-[35px] md:w-[49%]  lg:max-w-[32%] box-border mt-[20px]">
+                        <h3 class="text-default">
+                            ЗПИФ недвижимости
+                            «Недвижимость Первый»
+                        </h3>
+                        <div class="sum mt-[33px]">
+                            470 953 ₽
+                        </div>
+                        <div class="idx flex items-center mt-[15px]">
+                            <svg class="mr-[10px]" width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 0L13.0622 10.5H0.937822L7 0Z" fill="#A7CF43"/>
+                            </svg>
+                            СЧА
+                        </div>
+                    </li>
+                    <li class="fond-item sm:min-w-[260px] sm:mr-[10px] md:mr-[0] rounded-default bg-opacityGreen block py-[17px] pl-[25px] pr-[35px] md:w-[49%]  lg:max-w-[32%] box-border mt-[20px]">
+                        <h3 class="text-default">
+                            ЗПИФ недвижимости
+                            «Недвижимость Первый»
+                        </h3>
+                        <div class="sum mt-[33px]">
+                            470 953 ₽
+                        </div>
+                        <div class="idx flex items-center mt-[15px]">
+                            <svg class="mr-[10px] width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 11L13.0622 0.5H0.937822L7 11Z" fill="#D74D3E"/>
+                            </svg>
+                                
+                            СЧА
+                        </div>
+                    </li>
+                    <li class="fond-item sm:min-w-[260px] sm:mr-[10px] md:mr-[0] rounded-default bg-opacityGreen block py-[17px] pl-[25px] pr-[35px] md:w-[49%]  lg:max-w-[32%] box-border mt-[20px]">
+                        <h3 class="text-default">
+                            ЗПИФ недвижимости
+                            «Недвижимость Первый»
+                        </h3>
+                        <div class="sum mt-[33px]">
+                            470 953 ₽
+                        </div>
+                        <div class="idx flex items-center mt-[15px]">
+                            <svg class="mr-[10px]" width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 0L13.0622 10.5H0.937822L7 0Z" fill="#A7CF43"/>
+                            </svg>
+                            СЧА
+                        </div>
+                    </li>
+                    <li class="fond-item sm:min-w-[260px] sm:mr-[10px] md:mr-[0] rounded-default bg-opacityGreen block py-[17px] pl-[25px] pr-[35px] md:w-[49%]  lg:max-w-[32%] box-border mt-[20px]">
+                        <h3 class="text-default">
+                            ЗПИФ недвижимости
+                            «Недвижимость Первый»
+                        </h3>
+                        <div class="sum mt-[33px]">
+                            470 953 ₽
+                        </div>
+                        <div class="idx flex items-center mt-[15px]">
+                            <svg class="mr-[10px]" width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 0L13.0622 10.5H0.937822L7 0Z" fill="#A7CF43"/>
+                            </svg>
+                            СЧА
+                        </div>
+                    </li>
+                    <li class="fond-item sm:min-w-[260px] sm:mr-[10px] md:mr-[0] rounded-default bg-opacityGreen block py-[17px] pl-[25px] pr-[35px] md:w-[49%]  lg:max-w-[32%] box-border mt-[20px]">
+                        <h3 class="text-default">
+                            ЗПИФ недвижимости
+                            «Недвижимость Первый»
+                        </h3>
+                        <div class="sum mt-[33px]">
+                            470 953 ₽
+                        </div>
+                        <div class="idx flex items-center mt-[15px]">
+                            <svg class="mr-[10px]" width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 0L13.0622 10.5H0.937822L7 0Z" fill="#A7CF43"/>
+                            </svg>
+                            СЧА
+                        </div>
+                    </li>
+                    <li class="fond-item sm:min-w-[260px] sm:mr-[10px] md:mr-[0] rounded-default bg-opacityGreen block py-[17px] pl-[25px] pr-[35px] md:w-[49%]  lg:max-w-[32%] box-border mt-[20px]">
+                        <h3 class="text-default">
+                            ЗПИФ недвижимости
+                            «Недвижимость Первый»
+                        </h3>
+                        <div class="sum mt-[33px]">
+                            470 953 ₽
+                        </div>
+                        <div class="idx flex items-center mt-[15px]">
+                            <svg class="mr-[10px]" width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 0L13.0622 10.5H0.937822L7 0Z" fill="#A7CF43"/>
+                            </svg>
+                            СЧА
+                        </div>
+                    </li>
+                    <div class="show-all sm:hidden md:flex  flex-col items-center justify-center  absolute bottom-0 bg-green h-[150px] w-[100%] right-0">
+                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.4428 9.92263e-05C11.298 0.00435584 11.1618 0.0639485 11.0618 0.168236L5.99855 5.23148L0.935309 0.168236C0.832086 0.0628845 0.691618 0.00329169 0.543701 0.00329169C0.322357 0.00329169 0.12336 0.138439 0.0403563 0.343821C-0.0437116 0.549202 0.00630337 0.78438 0.164862 0.938682L5.61333 6.38715C5.82616 6.59998 6.17094 6.59998 6.38377 6.38715L11.8322 0.938682C11.994 0.783316 12.0451 0.543882 11.9578 0.336372C11.8716 0.128862 11.6673 -0.00415739 11.4428 9.92263e-05Z" fill="#2D3A2E"></path>
+                        </svg>
+                    </div>
+                </ul>
+            </main>
+            <footer class="pt-[25px] flex justify-center md:hidden absolute bottom-[0px] w-full">
+                <p class="texr-black  text-[10px]">© 2021 ООО УК «Гамма Групп». Все права защищены.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Lato';
+    src: url(../fonts/Lato-Regular.ttf);
+}
+
+@layer components {
+    .heading-1 {
+        @apply sm:text-h1-sm w-full justify-center text-black text-center sm:mt-[20px] md:mt-0 sm:flex md:hidden md:text-h1
+    }
+
+    .heading-2 {
+        @apply  sm:text-h1-sm w-full flex justify-center text-black text-center sm:mt-[20px] md:mt-0 md:block sm:hidden md:text-h1
+    }
+
+    .content-wrapper {
+        @apply  flex sm:flex-col lg:flex-row  justify-between sm:items-center lg:items-start w-full sm:mt-[0px] md:mt-[38px] flex-col items-center py-[20px]
+    }
+    .part {
+        @apply  sm:w-full md:max-w-[450px] flex flex-col items-center
+    }
+    .gosuslugi-block {
+        @apply  md:hidden w-[180px] h-[29px] mb-[10px]
+    }
+    .input-default {
+       @apply rounded-default w-full p-input-padding shadow-default;
+    }
+    .register-container {
+      @apply max-w-[1172px] min-h-[777px] lg:shadow-default lg:rounded-[40px]  flex flex-col items-center justify-between lg:px-[100px] lg:pt-[16px] lg:pb-[46px] sm:px-[20px]
+    }
+    .register-header {
+       @apply flex justify-between items-center
+    }
+    .btn-default {
+       @apply leading-[19px] px-[20px] pb-[10px] pt-[7px] rounded-[20px] text-white bg-green;
+    }
+    .color-ico-quatro {
+      @apply max-w-[12px] max-h-[12px] w-[12px] h-[12px] rounded-[3px] block
+    }
+    .bar-register {
+        @apply  w-full sm:mt-[20px] md:mt-0 md:py-[30px] box-border md:shadow-default rounded-default p-[20px] lg:mt-[20px]
+    }
+}
+
+.register-container {
+  
+}
+.scale-container-animation {
+   transform: scale(3);
+}
+
+.show-all {
+  border-bottom-left-radius: 40px;
+
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.load-line {
+  height: 2px;
+  background-color:#A7CF43;
+  margin-top: 20px;
+  border-radius: 450px;
+}
+
+.register-bar {
+    padding: 26px 25px 39px;
+}
+
+.gosuslugi {
+  background: url('/img/gosuslugi.svg');
+}
+
+/**/
+
+.checkbox-input:checked + .check-box__visible {
+  background: url('/img/check.svg') no-repeat center;
+}
+
+.active-link {
+  color: #A7CF43;
+}
+.active-link svg path {
+  fill: #A7CF43;
+}
+.fonds-list::-webkit-scrollbar {
+  opacity: 0;
+}
+.lc-block::-webkit-scrollbar {
+  opacity: 0;
+}
+.sidebar::-webkit-scrollbar {
+  opacity: 0;
+} 
+.logo-anim {
+    z-index: 99999; 
+    position: absolute;
+    width: 300px;
+}
+.logo-anim img {
+  max-width: 120px;
+}
+
+@media screen and ( min-width: 120px ) {
+    .sidebar {
+      transform: translateX(-100%);
+      transition: transform .5s;
+    }
+
+    .sidebar.open {
+      transform: translateX(0%);
+    }
+}
+
+@media screen and ( min-width: 1280px ) {
+  .sidebar {
+    transform: translateX(0%);
+  }
+  .content-bar {
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+  }
+}
+
+body {
+    font-family: 'Lato';
+    overflow: hidden;
+}
