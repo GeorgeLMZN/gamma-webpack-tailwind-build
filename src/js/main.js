@@ -1,4 +1,13 @@
 import '../css/main.css';
 import '../index.html';
+import '../auth.html';
+import '../lk.html';
+import '../docs.html';
+import '../register-form.html';
+
+
+
 import './animation.js';
-const a = 4;
+
+import './select.js'
+import './showMore.js'

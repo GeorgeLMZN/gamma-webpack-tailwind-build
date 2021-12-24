@@ -28,6 +28,7 @@ module.exports = {
         },
         borderRadius: {
             'default': '28px',
+            'quatro': '10px',
         },
         fontSize: {
             'default': '16px',
@@ -35,7 +36,8 @@ module.exports = {
             'small': '14px',
             'h1-sm': '25px',
             'extra-small': '12px',
-            'medium': '18px'
+            'medium': '18px',
+            "h2": '20px'
         },
         lineHeight: {
             'deafult': '19px',

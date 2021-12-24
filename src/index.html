@@ -15,99 +15,101 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
 
-  <body>
+  <body class="overflow-x-hidden overflow-y-auto">
     <div class="link-bar flex">
         <a href="./register-form.html"></a><a href=""></a><a href=""></a><a href=""></a><a href=""></a>
     </div>
-    <div class="content-wrapper">
-      <div class="container register-container absolute z-50 bg-white scale-container-animation flex flex-col justify-center align-center">
-        <div class="logo-anim flex flex-col">
-          <img class="ml-[90px]" src="./img/logo.png" alt="">
-          <div class="load-line"></div>
-        </div>
-      </div>
+    <div class="content-wrapper pt-[10px]">
       <div class="container register-container relative">
-        <header class="register-header w-full">
-              <a href="#" class="logo">
-               <img src="./img/logo.png" alt="">
-                    
-              
-              </a>
-              <a href="" class="helpme-link flex items-center">
-                <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.10526 0C3.61737 0 0.789474 2.82789 0.789474 6.31579V7.10526V7.81764C0.336546 8.24953 0 8.80511 0 9.47368C0 10.4542 0.677014 11.1812 1.53423 11.5368C2.56136 13.9919 4.61861 15.7895 7.10526 15.7895H8.68421C8.78883 15.791 8.89269 15.7716 8.98977 15.7326C9.08685 15.6936 9.17521 15.6357 9.24971 15.5622C9.32421 15.4888 9.38337 15.4012 9.42375 15.3047C9.46413 15.2082 9.48493 15.1046 9.48493 15C9.48493 14.8954 9.46413 14.7918 9.42375 14.6953C9.38337 14.5988 9.32421 14.5112 9.24971 14.4378C9.17521 14.3643 9.08685 14.3064 8.98977 14.2674C8.89269 14.2284 8.78883 14.209 8.68421 14.2105H7.10526C5.32228 14.2105 3.70339 12.868 2.8896 10.7473C2.83891 10.6152 2.75363 10.4991 2.64268 10.4112C2.53173 10.3233 2.39919 10.2668 2.25894 10.2477C1.87013 10.1942 1.57895 9.88036 1.57895 9.47368C1.57895 9.16974 1.73243 8.93129 1.97214 8.79369C2.09257 8.72451 2.19263 8.62479 2.2622 8.50458C2.33178 8.38438 2.36842 8.24795 2.36842 8.10907V7.89474V7.10526C2.36842 6.66947 2.72211 6.31579 3.15789 6.31579H11.0526C11.4884 6.31579 11.8421 6.66947 11.8421 7.10526V7.89474V11.0526H8.61482C8.53329 10.822 8.38234 10.6223 8.18272 10.4809C7.9831 10.3396 7.74461 10.2635 7.5 10.2632C7.18593 10.2632 6.88472 10.3879 6.66264 10.61C6.44055 10.8321 6.31579 11.1333 6.31579 11.4474C6.31619 11.7465 6.42977 12.0344 6.63371 12.2532C6.83765 12.472 7.11684 12.6055 7.41519 12.627C7.44336 12.63 7.47167 12.6316 7.5 12.6316H12.6316H13.4211C14.2895 12.6316 15 11.9211 15 11.0526V9.47368C15 8.60526 14.2895 7.89474 13.4211 7.89474V6.31579C13.4211 2.82789 10.5932 0 7.10526 0Z" fill="#B8B8B8"/>
-                </svg>
-                <span class="text-default text-black ml-[10px]">Поддержка</span> 
-              </a>
-        </header>
-        <main class="w-full register-main">
-            <h1 class="heading-1">Регистрация <br> в личном кабинете</h1>
-            <h2 class="heading-2">Регистрация в личном кабинете</h1>
+        <div class="container register-container absolute z-50 bg-white scale-container-animation flex flex-col justify-center align-center max-h-[100vh]">
+          <div class="logo-anim flex flex-col">
+            <img class="ml-[90px]" src="./img/logo.png" alt="">
+            <div class="load-line"></div>
+          </div>
+        </div>
+      <div class="w-full content-div animated-content-div">
+          <header class="register-header w-full">
+            <a href="#" class="logo">
+             <img src="./img/logo.png" alt="">
+                  
+            
+            </a>
+            <a href="" class="helpme-link flex items-center">
+              <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.10526 0C3.61737 0 0.789474 2.82789 0.789474 6.31579V7.10526V7.81764C0.336546 8.24953 0 8.80511 0 9.47368C0 10.4542 0.677014 11.1812 1.53423 11.5368C2.56136 13.9919 4.61861 15.7895 7.10526 15.7895H8.68421C8.78883 15.791 8.89269 15.7716 8.98977 15.7326C9.08685 15.6936 9.17521 15.6357 9.24971 15.5622C9.32421 15.4888 9.38337 15.4012 9.42375 15.3047C9.46413 15.2082 9.48493 15.1046 9.48493 15C9.48493 14.8954 9.46413 14.7918 9.42375 14.6953C9.38337 14.5988 9.32421 14.5112 9.24971 14.4378C9.17521 14.3643 9.08685 14.3064 8.98977 14.2674C8.89269 14.2284 8.78883 14.209 8.68421 14.2105H7.10526C5.32228 14.2105 3.70339 12.868 2.8896 10.7473C2.83891 10.6152 2.75363 10.4991 2.64268 10.4112C2.53173 10.3233 2.39919 10.2668 2.25894 10.2477C1.87013 10.1942 1.57895 9.88036 1.57895 9.47368C1.57895 9.16974 1.73243 8.93129 1.97214 8.79369C2.09257 8.72451 2.19263 8.62479 2.2622 8.50458C2.33178 8.38438 2.36842 8.24795 2.36842 8.10907V7.89474V7.10526C2.36842 6.66947 2.72211 6.31579 3.15789 6.31579H11.0526C11.4884 6.31579 11.8421 6.66947 11.8421 7.10526V7.89474V11.0526H8.61482C8.53329 10.822 8.38234 10.6223 8.18272 10.4809C7.9831 10.3396 7.74461 10.2635 7.5 10.2632C7.18593 10.2632 6.88472 10.3879 6.66264 10.61C6.44055 10.8321 6.31579 11.1333 6.31579 11.4474C6.31619 11.7465 6.42977 12.0344 6.63371 12.2532C6.83765 12.472 7.11684 12.6055 7.41519 12.627C7.44336 12.63 7.47167 12.6316 7.5 12.6316H12.6316H13.4211C14.2895 12.6316 15 11.9211 15 11.0526V9.47368C15 8.60526 14.2895 7.89474 13.4211 7.89474V6.31579C13.4211 2.82789 10.5932 0 7.10526 0Z" fill="#B8B8B8"/>
+              </svg>
+              <span class="text-default text-black ml-[10px]">Поддержка</span> 
+            </a>
+      </header>
+      <main class="w-full register-main">
+          <h1 class="heading-1">Регистрация <br> в личном кабинете</h1>
+          <h2 class="heading-2">Регистрация в личном кабинете</h1>
 
-            <div class="content-wrapper">
-              <div class="part">
-                <h2 class="text-black text-default">Через Госуслуги</h2>
-                <div class="gosuslugi-block"></div>
-                <p class="text-black text-small">
-                  Большая часть данных будет заполнена автоматически. После
-                  нажатия на кнопку «Зарегистрироваться» вы будете переадресованы 
-                  на сайт Госуслуги, в котором вам необходимо авторизоваться
+          <div class="content-wrapper">
+            <div class="part">
+              <h2 class="text-black text-h2 w-full flex justify-center md:my-[20px]">Через Госуслуги</h2>
+              <div class="gosuslugi-block sm:block md:hidden"></div>
+              <p class="text-black text-default">
+                Большая часть данных будет заполнена автоматически. После
+                нажатия на кнопку «Зарегистрироваться» вы будете переадресованы 
+                на сайт Госуслуги, в котором вам необходимо авторизоваться
+              </p>
+              <div class="bar-register max-w-[500px]">
+                <form class="register-form flex flex-col items-center" action="register-form.html">
+                    <div class="gosuslugi w-[180px] h-[29px] sm:hidden md:block"></div>
+                    <button class="btn-default md:mt-[30px]">Зарегистрироваться</button>
+                </form>
+              </div>
+           </div>
+
+           <div class="divider w-full text-gray flex items-center md:hidden justify-between text-extra-small">
+              <svg class="mr-[5px]" width="140" height="2" viewBox="0 0 140 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 1H140" stroke="#B8B8B8" stroke-width="0.5"/>
+              </svg>
+                  <span>
+                      или 
+                  </span>
+              <svg class="ml-[5px]" width="140" height="2" viewBox="0 0 140 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 1H140" stroke="#B8B8B8" stroke-width="0.5"/>
+              </svg>           
+           </div>
+
+            <div class="part">
+                <h2 class="text-black text-h2 sm:my-[20px] w-full flex justify-center">Личная встреча</h2>
+                <p class="text-black text-default w">
+                  Регистрация может быть выполнена при посещении наших 
+                  офисов лично. Оставьте свой номер телефона, мы свяжемся 
+                  с вами и договоримся о встрече
                 </p>
-                <div class="bar-register">
-                  <form class="register-form flex flex-col items-center" action="">
-                      <div class="gosuslugi w-[180px] h-[29px] sm:hidden md:block"></div>
-                      <button class="btn-default md:mt-[30px]">Зарегистрироваться</button>
+                <div class="bar-register md:p-[20px] md:pr-[40px]">
+                  <form class="register-form" action="">
+                      <div class="form-block mt-[6px]">
+                          <input type="text" placeholder="Ваш имя" class="input-default">
+                      </div>
+                      <div class="form-block mt-[6px]">
+                        <input type="text" placeholder="Ваш телефон" class="input-default">
+                      </div>
+                      <div class="form-block mt-[18px] flex sm:flex-col md:flex-row items-center">
+                          <button class="btn-default">Отправить</button>
+                          <div class="checkbox w-full ml-[20px] cursor-pointer sm:my-[15px] md:py-0">
+                              <label class="checkbox w-full flex relative items-center sm:justify-center md:justify-start sm:pl-[10px] md:pl-[0px] ">
+                                  <input class="checkbox-input invisible absolute" type="checkbox"/>
+                                  <span class="check-box__visible w-[22px] h-[22px] min-w-[22px] min-h-[22px] block border rounded-[3px] border-gray"></span>
+                                  <span class="checkbox-text text-black text-extra-small ml-[5px]">
+                                    <span class="flex wrap-no flex-col whitespace-nowrap leading-[14px] sm:text-small">Я даю свое согласие на обработку<a href="" class="text-green underline">персональных данных</a> </span>
+                                  </span>
+                              </label>
+                          </div>
+                      </div>
                   </form>
                 </div>
-             </div>
-
-             <div class="divider w-full text-gray flex items-center md:hidden justify-between text-extra-small">
-                <svg class="mr-[5px]" width="110" height="2" viewBox="0 0 140 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 1H140" stroke="#B8B8B8" stroke-width="0.5"/>
-                </svg>
-                    <span>
-                        или 
-                    </span>
-                <svg class="ml-[5px]" width="110" height="2" viewBox="0 0 140 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 1H140" stroke="#B8B8B8" stroke-width="0.5"/>
-                </svg>           
-             </div>
-
-              <div class="part">
-                  <h2 class="text-black text-default">Личная встреча</h2>
-                  <p class="text-black text-small">
-                    Регистрация может быть выполнена при посещении наших 
-                    офисов лично. Оставьте свой номер телефона, мы свяжемся 
-                    с вами и договоримся о встрече
-                  </p>
-                  <div class="bar-register pr-[40px]">
-                    <form class="register-form" action="">
-                        <div class="form-block mt-[6px]">
-                            <input type="text" placeholder="Ваш имя" class="input-default">
-                        </div>
-                        <div class="form-block mt-[6px]">
-                          <input type="text" placeholder="Ваш телефон" class="input-default">
-                        </div>
-                        <div class="form-block mt-[18px] flex sm:flex-col md:flex-row items-center">
-                            <button class="btn-default">Отправить</button>
-                            <div class="checkbox w-full ml-[20px] cursor-pointer sm:my-[15px] md:py-0">
-                                <label class="checkbox w-full flex relative items-center justify-start sm:pl-[10px] md:pl-[0px] ">
-                                    <input class="checkbox-input invisible absolute" type="checkbox"/>
-                                    <span class="check-box__visible w-[22px] h-[22px] min-w-[22px] min-h-[22px] block border rounded-[3px] border-gray"></span>
-                                    <span class="checkbox-text text-black text-extra-small ml-[5px]">
-                                      <span class="flex wrap-no flex-col whitespace-nowrap leading-[14px]">Я даю свое согласие на обработку<a href="" class="text-green underline">персональных данных</a> </span>
-                                    </span>
-                                </label>
-                            </div>
-                        </div>
-                    </form>
-                  </div>
-              </div>
             </div>
-        </main>
-        <footer class="text-center register-footer">
-            <p class="text-black sm:text-[10px] md:text-extra-small">© 2021 ООО УК «Гамма Групп». Все права защищены.</p>
-        </footer>
+          </div>
+      </main>
+      <footer class="text-center register-footer sm:pb-[20px] md:pb-[20px]">
+          <p class="text-black sm:text-[12px] md:text-extra-small">© 2021 ООО УК «Гамма Групп». Все права защищены.</p>
+      </footer>
+        </div>
   </div>
 </div>
   </body>
