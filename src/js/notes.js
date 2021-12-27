@@ -1,6 +1,6 @@
 "use strict";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 export default class Notes {
     constructor (notes,bg, circle, count, sidebar) {
@@ -38,24 +38,23 @@ export default class Notes {
             e.classList.remove('note-visible-sidebar');
         })
         this.notes.forEach(element => {
-           console.log(this.count);
            element.classList.remove('open');
+
            if(element.classList.contains('note-' + this.count)) {
                 element.classList.add('open');
-                gsap.fromTo('.open',{scale: 0 , y: -this.yOffset, x: 170},{ duration: 0.2, scale: 1, y: 0, x: 0, ease: "expoScale(0, 1)"});
+                gsap.fromTo('.note',{scale: 0 },{ duration: 0.2, scale: 1, ease: "expoScale(0, 1)"});
                 const circle = document.querySelector('.note-circle--' + this.count) || document.querySelector('.note-circle-sidebar--' +  this.count);
+
                 if(circle) {
                     console.log(sidebar)
                     circle.classList.add('note-visible');
                     circle.classList.add('note-visible-sidebar');
                     console.log(circle.getBoundingClientRect());
+
                     element.style.top = circle.getBoundingClientRect().top + 'px';
-                    if(circle.getBoundingClientRect().left > element.getBoundingClientRect().width) {
-                        element.style.left = ( circle.getBoundingClientRect().left - element.getBoundingClientRect().width ) + 'px';
-                    }else {
-                        element.style.left = sidebar.getBoundingClientRect().width + 'px';
-                        console.log(element.getBoundingClientRect())
-                    }
+                
+                    element.style.right = (window.clientWidth - circle.getBoundingClientRect().right) + 'px';
+    
                 }
            }
         });
