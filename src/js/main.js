@@ -11,3 +11,4 @@ import './animation.js';
 
 import './select.js'
 import './showMore.js'
+import './notes.js';

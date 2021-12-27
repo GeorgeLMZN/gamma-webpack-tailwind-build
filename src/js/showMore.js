@@ -19,6 +19,11 @@ export default class showMore {
         })
     }
     toggle() {
+        this.block.scrollTo({
+            y:0,
+            x:0,
+            behavior: 'smooth'
+        })
         this.block.classList.toggle('scroll-list');
         this.animIcon();
     }
@@ -69,5 +74,39 @@ items.forEach((e) => {
       },
     )
 })
+
+
+const menuBtn = document.querySelector('.controll-desktop');
+const sidebarBtn = document.querySelector('.inside-sidebar');
+const sidebar = document.querySelector('.sidebar');
+if(menuBtn && sidebar) {
+    menuBtn.addEventListener('click', () => {
+        sidebar.classList.add('open');
+        menuBtn.classList.add('hidden');
+    });
+    sidebarBtn.addEventListener('click', () => {
+        menuBtn.classList.remove('hidden');
+        sidebar.classList.remove('open');
+    });
+    const btnControllList = document.querySelector('.controll-list');
+    const list = document.querySelector('.lc-fonds');
+    
+    btnControllList.addEventListener('click', () => {
+            list.classList.toggle('max-h-[247px]');
+            list.classList.toggle('h-fit');
+            list.classList.toggle('overflow-y-hidden');
+            btnControllList.classList.toggle('open');
+    })
+    
+    const li = document.querySelectorAll('.controll-li');
+    
+    li.forEach((e) => {
+        e.addEventListener('click', () => {
+            e.classList.toggle('max-h-[56px]');
+            const icon = e.querySelector('svg');
+            icon.classList.toggle('rotate-[180deg]')
+        })
+    })
+}
 
 
